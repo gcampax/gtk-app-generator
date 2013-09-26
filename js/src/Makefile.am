@@ -3,8 +3,7 @@ NULL =
 nodist_bin_SCRIPTS = $(PACKAGE_TARNAME)
 nodist_pkgdata_SCRIPTS = $(PACKAGE_NAME)
 
-# Note: automake is dumb, so we can't use configure substituions
-EXTRA_SCRIPTS = com.example.Gtk.JSApplication gtk-js-app
+EXTRA_SCRIPTS = @PACKAGE_NAME@ @PACKAGE_TARNAME@
 
 jsdir = $(pkgdatadir)
 dist_js_DATA = \

@@ -1,10 +1,10 @@
 <schemalist gettext-domain="@PACKAGE_NAME@">
   <schema id="@PACKAGE_NAME@" path="@PACKAGE_DBUS_PATH@/">
-    <key name="show-exclamation-mark" type="b">
+    <key name="dummy" type="b">
       <default>true</default>
-      <summary>Show exclamation mark</summary>
+      <summary>Dummy key</summary>
       <description>
-        Use the exclamation mark at the end of "Hello world".
+	Dummy description
       </description>
     </key>
   </schema>

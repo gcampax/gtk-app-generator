@@ -1,8 +1,8 @@
 AC_PREREQ(2.63)
-AC_INIT([com.example.Gtk.JSApplication], [0.1],
-        [bugs@js-app.example.com],
-        [gtk-js-app],
-        [http://www.example.com/gtk-js-app/])
+AC_INIT([@PACKAGE_NAME@], [0.1],
+        [@PACKAGE_EMAIL@],
+        [@PACKAGE_TARNAME@],
+        [@PACKAGE_URL@])
 
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
@@ -26,8 +26,6 @@ AC_PROG_CC
 AM_PROG_CC_C_O
 LT_INIT([disable-static])
 
-LIBGD_INIT([main-view gir])
-
 PKG_PROG_PKG_CONFIG([0.22])
 
 GLIB_GSETTINGS
@@ -49,7 +47,6 @@ AC_OUTPUT([
   Makefile
   data/Makefile
   data/icons/Makefile
-  libgd/Makefile
   src/Makefile
   po/Makefile.in
 ])

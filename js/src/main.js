@@ -24,18 +24,15 @@
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 // SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-pkg.initSubmodule('libgd');
 pkg.initGettext();
 pkg.initFormat();
 pkg.initResources();
-pkg.require({ 'Gd': '1.0',
-              'Gdk': '3.0',
+pkg.require({ 'Gdk': '3.0',
               'Gio': '2.0',
               'GLib': '2.0',
               'GObject': '2.0',
               'Gtk': '3.0' });
 
-const Gd = imports.gi.Gd;
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const Gtk = imports.gi.Gtk;
@@ -50,8 +47,8 @@ function initEnvironment() {
     };
 }
 
-const MyApplication = new Lang.Class({
-    Name: 'MyApplication',
+const Application = new Lang.Class({
+    Name: 'Application',
     Extends: Gtk.Application,
 
     _init: function() {
@@ -60,7 +57,7 @@ const MyApplication = new Lang.Class({
         if (this.flags & Gio.ApplicationFlags.IS_SERVICE)
             this.inactivity_timeout = 60000;
 
-        GLib.set_application_name(_("My JS Application"));
+        GLib.set_application_name(_("@APPLICATION_NAME@"));
     },
 
     _onQuit: function() {
@@ -69,7 +66,7 @@ const MyApplication = new Lang.Class({
 
     _initAppMenu: function() {
         let builder = new Gtk.Builder();
-        builder.add_from_resource('/com/example/Gtk/JSApplication/app-menu.ui');
+        builder.add_from_resource('@PACKAGE_DBUS_PATH@/app-menu.ui');
 
         let menu = builder.get_object('app-menu');
         this.set_app_menu(menu);
@@ -77,16 +74,13 @@ const MyApplication = new Lang.Class({
 
     vfunc_startup: function() {
         this.parent();
-        Gd.ensure_types();
 
-        Util.loadStyleSheet('/com/example/Gtk/JSApplication/application.css');
+        Util.loadStyleSheet('@PACKAGE_DBUS_PATH@/application.css');
 
         Util.initActions(this,
                          [{ name: 'quit',
                             activate: this._onQuit }]);
         this._initAppMenu();
-
-        log(_("My JS Application started"));
     },
 
     vfunc_activate: function() {
@@ -94,8 +88,6 @@ const MyApplication = new Lang.Class({
     },
 
     vfunc_shutdown: function() {
-        log(_("My JS Application exiting"));
-
         this.parent();
     }
 });
@@ -103,5 +95,5 @@ const MyApplication = new Lang.Class({
 function main(argv) {
     initEnvironment();
 
-    return (new MyApplication()).run(argv);
+    return (new Application()).run(argv);
 }

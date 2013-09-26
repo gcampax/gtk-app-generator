@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">@PACKAGE_NAME@.desktop</id>
+  <licence>CC0</licence>
+  <description>
+    <_p>
+      Fill your description here.
+    </_p>
+  </description>
+  <screenshots>
+    <screenshot type="default" width="1024" height="768">@PACKAGE_URL@/screenshots/large.png</screenshot>
+  </screenshots>
+  <url type="homepage">@PACKAGE_URL@</url>
+  <updatecontact>@PACKAGE_EMAIL@</updatecontact>
+</application>

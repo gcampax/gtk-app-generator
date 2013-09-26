@@ -1,6 +1,6 @@
 icondir = $(datadir)/icons/
 
-# ##example## Uncomment when an icon actually exists
+# Uncomment when an icon actually exists
 
 #nobase_icon_DATA = \
 #	hicolor/16x16/apps/$(PACKAGE_NAME).png \

@@ -25,45 +25,18 @@ appdata_DATA = $(PACKAGE_NAME).appdata.xml
 
 $(PACKAGE_NAME).service: $(PACKAGE_NAME).service.in
 	$(AM_V_GEN) sed \
-		-e "s|[@]PACKAGE_NAME@|$(PACKAGE_NAME)|g" \
-		-e "s|[@]PACKAGE_TARNAME@|$(PACKAGE_TARNAME)|g" \
 		-e "s|[@]pkgdatadir@|$(pkgdatadir)|g" \
 		-e "s|[@]pkglibdir@|$(pkglibdir)|g" \
-		$< > $@
-
-$(PACKAGE_NAME).desktop.in: $(PACKAGE_NAME).desktop.in.in
-	$(AM_V_GEN) sed \
-		-e "s|[@]PACKAGE_NAME@|$(PACKAGE_NAME)|g" \
-		-e "s|[@]PACKAGE_TARNAME@|$(PACKAGE_TARNAME)|g" \
-		-e "s|[@]pkgdatadir@|$(pkgdatadir)|g" \
-		-e "s|[@]pkglibdir@|$(pkglibdir)|g" \
-		$< > $@
-
-$(PACKAGE_NAME).search-provider.ini: $(PACKAGE_NAME).search-provider.ini.in
-	$(AM_V_GEN) sed \
-		-e "s|[@]PACKAGE_NAME@|$(PACKAGE_NAME)|g" \
-		-e "s|[@]PACKAGE_DBUS_PATH@|$(PACKAGE_DBUS_PATH)|g" \
-		$< > $@
-
-$(PACKAGE_NAME).gschema.xml: $(PACKAGE_NAME).gschema.xml.in
-	$(AM_V_GEN) sed \
-		-e "s|[@]PACKAGE_NAME@|$(PACKAGE_NAME)|g" \
-		-e "s|[@]PACKAGE_DBUS_PATH@|$(PACKAGE_DBUS_PATH)|g" \
 		$< > $@
 
 servicedir = $(datadir)/dbus-1/services
 service_DATA = $(PACKAGE_NAME).service
 
-# ##example## comment if you're not implementing a gnome-shell search provider
-searchproviderdir = $(datadir)/gnome-shell/search-providers
-dist_searchprovider_DATA = $(PACKAGE_NAME).search-provider.ini
-
 EXTRA_DIST = \
-	$(PACKAGE_NAME).desktop.in.in \
+	$(PACKAGE_NAME).desktop.in \
 	$(PACKAGE_NAME).service.in \
 	$(PACKAGE_NAME).gresource.xml \
-	$(PACKAGE_NAME).search-provider.ini.in \
-	$(PACKAGE_NAME).gschema.xml.in \
+	$(PACKAGE_NAME).gschema.xml \
 	$(PACKAGE_NAME).appdata.xml.in \
 	$(resource_files) \
 	$(NULL)
