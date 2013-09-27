@@ -1,0 +1,8 @@
+[type: gettext/glade]data/app-menu.ui
+[type: gettext/glade]data/main.ui
+data/@PACKAGE_NAME@.desktop.in
+data/@PACKAGE_NAME@.appdata.xml.in
+data/@PACKAGE_NAME@.gschema.xml
+src/main.js
+
+

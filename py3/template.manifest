@@ -1,0 +1,29 @@
+# just a list of files
+# use : to separate the destination from the genned name
+# keep sorted
+
+autogen.sh
+configure.ac
+data/application.css
+data/app-menu.ui
+data/icons/Makefile.am
+data/Makefile.am
+data/main.ui
+data/@PACKAGE_NAME@.appdata.xml.in:data/appdata.xml.in
+data/@PACKAGE_NAME@.desktop.in:data/desktop.in
+data/@PACKAGE_NAME@.gresource.xml:data/gresource.xml
+data/@PACKAGE_NAME@.gschema.xml:data/gschema.xml
+data/@PACKAGE_NAME@.service.in:data/service.in
+git.mk
+Makefile.am
+@PACKAGE_TARNAME@.anjuta:project.anjuta
+@PACKAGE_TARNAME@.doap:project.doap
+po/POTFILES.in
+po/POTFILES.skip
+src/Makefile.am
+src/main.py
+src/package.py
+src/@PACKAGE_NAME@.in:src/app.in
+src/@PACKAGE_TARNAME@.in:src/launcher.in
+src/util.py
+src/window.py

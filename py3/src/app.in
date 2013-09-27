@@ -1,0 +1,8 @@
+#!@PYTHON@
+import sys
+sys.path.append("@pkgdatadir@")
+import package
+package.start(_name="@PACKAGE_NAME@",
+              _version="@PACKAGE_VERSION@",
+              _prefix="@prefix@",
+              _libdir="@libdir@")
