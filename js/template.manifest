@@ -17,6 +17,7 @@ data/@PACKAGE_NAME@.service.in:data/service.in
 git.mk
 Makefile.am
 @PACKAGE_TARNAME@.anjuta:project.anjuta
+@PACKAGE_TARNAME@.doap:project.doap
 po/POTFILES.in
 po/POTFILES.skip
 src/Makefile.am
