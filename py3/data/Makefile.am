@@ -38,8 +38,7 @@ EXTRA_DIST = \
 	$(PACKAGE_NAME).gresource.xml \
 	$(PACKAGE_NAME).gschema.xml \
 	$(PACKAGE_NAME).appdata.xml.in \
-	$(resource_files) \
-	$(NULL)
+	$(resource_files)
 
 CLEANFILES = \
 	$(PACKAGE_NAME).desktop.in \
@@ -50,8 +49,7 @@ CLEANFILES = \
 	$(PACKAGE_NAME).appdata.xml \
 	$(apps_DATA) \
 	*.valid \
-	gschemas.compiled \
-	$(NULL)
+	gschemas.compiled
 
 # For uninstalled use
 all-local:

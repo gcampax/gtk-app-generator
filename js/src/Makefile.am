@@ -1,9 +1,7 @@
 NULL =
 
-nodist_bin_SCRIPTS = $(PACKAGE_TARNAME)
-nodist_pkgdata_SCRIPTS = $(PACKAGE_NAME)
-
-EXTRA_SCRIPTS = @PACKAGE_NAME@ @PACKAGE_TARNAME@
+nodist_bin_SCRIPTS = @PACKAGE_TARNAME@
+nodist_pkgdata_SCRIPTS = @PACKAGE_NAME@
 
 jsdir = $(pkgdatadir)
 dist_js_DATA = \
@@ -11,8 +9,7 @@ dist_js_DATA = \
 	package.js	\
 	params.js	\
 	util.js		\
-	window.js	\
-	$(NULL)
+	window.js
 
 $(PACKAGE_TARNAME): $(PACKAGE_TARNAME).in
 	$(AM_V_GEN) sed \

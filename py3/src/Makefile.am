@@ -1,17 +1,14 @@
 NULL =
 
-nodist_bin_SCRIPTS = $(PACKAGE_TARNAME)
-nodist_pkgdata_SCRIPTS = $(PACKAGE_NAME)
-
-EXTRA_SCRIPTS = @PACKAGE_NAME@ @PACKAGE_TARNAME@
+nodist_bin_SCRIPTS = @PACKAGE_TARNAME@
+nodist_pkgdata_SCRIPTS = @PACKAGE_NAME@
 
 pydir = $(pkgdatadir)
 dist_py_PYTHON = \
 	main.py		\
 	package.py	\
 	util.py		\
-	window.py	\
-	$(NULL)
+	window.py
 
 $(PACKAGE_TARNAME): $(PACKAGE_TARNAME).in
 	$(AM_V_GEN) sed \

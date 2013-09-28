@@ -3,6 +3,7 @@
 import os, sys, time
 import subprocess
 import argparse
+import shutil
 
 has_libgd = True
 all_files = []
@@ -32,6 +33,7 @@ def gen_file(to, _from=None):
             args += ['-e', 's|' + key + '|' + value + '|g']
         args.append(_from)
         subprocess.check_call(args, stdout=outf)
+        shutil.copystat(_from, to)
 
 def main():
     global destdir, template_dir, sed_subst
