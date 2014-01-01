@@ -3,6 +3,6 @@ Type=Application
 _Name=@APPLICATION_NAME@
 _Comment=@APPLICATION_COMMENT@
 Icon=@PACKAGE_NAME@
-Exec=@PACKAGE_TARNAME@
+Exec=appctl start @PACKAGE_NAME@
 DBusActivatable=true
 StartupNotify=true
