@@ -1,0 +1,11 @@
+[Unit]
+# Optional
+Description=@PACKAGE_NAME@
+# Optional (obviously)
+Documentation=@PACKAGE_URL@
+
+[BusName]
+# Optional
+Name=@PACKAGE_NAME@
+# Optional
+Service=@PACKAGE_NAME@.service

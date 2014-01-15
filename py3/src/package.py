@@ -137,6 +137,13 @@ def init(_name, _version, _prefix, _libdir, _flags=0):
     GIRepository.Repository.prepend_search_path(girpath)
     GIRepository.Repository.prepend_library_path(libpath)
 
+    try:
+        resource = Gio.Resource.load(GLib.build_filenamev([pkgdatadir,
+                                                           name + '.data.gresource']))
+        resource._register()
+    except e:
+        pass
+
 def start(args=None, **kw):
     """
     @params: see init()
@@ -167,11 +174,6 @@ def init_submodule(name):
     else:
         # Running installed, submodule is in $(pkglibdir), nothing to do
         pass
-
-def init_resources():
-    resource = Gio.Resource.load(GLib.build_filenamev([pkgdatadir,
-                                                       name + '.gresource']))
-    resource._register()
 
 # Launcher support
 

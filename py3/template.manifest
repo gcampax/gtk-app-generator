@@ -11,9 +11,10 @@ data/Makefile.am
 data/main.ui
 data/@PACKAGE_NAME@.appdata.xml.in:data/appdata.xml.in
 data/@PACKAGE_NAME@.desktop.in:data/desktop.in
-data/@PACKAGE_NAME@.gresource.xml:data/gresource.xml
+data/@PACKAGE_NAME@.data.gresource.xml:data/data.gresource.xml
 data/@PACKAGE_NAME@.gschema.xml:data/gschema.xml
 data/@PACKAGE_NAME@.service.in:data/service.in
+data/@PACKAGE_NAME@.busname:data/busname
 git.mk
 Makefile.am
 @PACKAGE_TARNAME@.anjuta:project.anjuta
@@ -27,3 +28,4 @@ src/@PACKAGE_NAME@.in:src/app.in
 src/@PACKAGE_TARNAME@.in:src/launcher.in
 src/util.py
 src/window.py
+@PACKAGE_NAME@.spec:rpm.spec

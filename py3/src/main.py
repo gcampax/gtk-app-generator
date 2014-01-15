@@ -25,7 +25,6 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 pkg.init_gettext()
-pkg.init_resources()
 
 import gi
 gi.require_version('Gdk', '3.0')

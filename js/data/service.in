@@ -1,3 +1,9 @@
-[D-BUS Service]
-Name=@PACKAGE_NAME@
-Exec=@pkgdatadir@/@PACKAGE_NAME@
+[Unit]
+Description=@APPLICATION_NAME@
+Documentation=@PACKAGE_URL@
+
+[Service]
+BusName=@PACKAGE_NAME@
+ExecStart=@pkgdatadir@/@PACKAGE_NAME@
+#Type=application
+ExecStop=@bindir@/gapplication @PACKAGE_NAME@
