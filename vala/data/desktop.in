@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+_Name=@APPLICATION_NAME@
+_Comment=@APPLICATION_COMMENT@
+Icon=@PACKAGE_NAME@
+Exec=gapplication launch @PACKAGE_NAME@
+DBusActivatable=true
+StartupNotify=true

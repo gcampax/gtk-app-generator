@@ -67,6 +67,7 @@ def main():
     author_name = opt.author_name or subprocess.check_output(['git', 'config', 'user.name']).decode().strip()
     sed_subst = { '@PACKAGE_NAME@': pkg_name,
                   '@PACKAGE_DBUS_PATH@': '/' + pkg_name.replace('.', '/'),
+                  '@PACKAGE_AM_NAME@': pkg_name.replace('.', '_'),
                   '@PACKAGE_TARNAME@': binary_name,
                   '@APPLICATION_NAME@': opt.app_name,
                   '@APPLICATION_COMMENT@': opt.app_comment,
