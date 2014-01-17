@@ -1,6 +1,6 @@
 bin_SCRIPTS = @PACKAGE_TARNAME@
 
-programdir = $(prefix)/lib/$(PACKAGE_NAME)
+programdir = $(prefix)/lib/@PACKAGE_NAME@
 program_PROGRAMS = @PACKAGE_NAME@
 
 @PACKAGE_AM_NAME@_SOURCES = \

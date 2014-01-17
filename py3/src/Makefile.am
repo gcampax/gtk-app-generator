@@ -8,10 +8,9 @@ dist_py_PYTHON = \
 	util.py		\
 	window.py
 
-$(PACKAGE_TARNAME): $(PACKAGE_TARNAME).in
+@PACKAGE_TARNAME@: @PACKAGE_TARNAME@.in
 	$(AM_V_GEN) sed \
 		-e "s|[@]PYTHON@|$(PYTHON)|g" \
-		-e "s|[@]PACKAGE_NAME@|$(PACKAGE_NAME)|g" \
 		-e "s|[@]PACKAGE_VERSION@|$(PACKAGE_VERSION)|g" \
 		-e "s|[@]prefix@|$(prefix)|g" \
 		-e "s|[@]libdir@|$(libdir)|g" \
@@ -19,10 +18,9 @@ $(PACKAGE_TARNAME): $(PACKAGE_TARNAME).in
 		$< > $@
 	@chmod +x $@
 
-$(PACKAGE_NAME): $(PACKAGE_NAME).in
+@PACKAGE_NAME@: @PACKAGE_NAME@.in
 	$(AM_V_GEN) sed \
 		-e "s|[@]PYTHON@|$(PYTHON)|g" \
-		-e "s|[@]PACKAGE_NAME@|$(PACKAGE_NAME)|g" \
 		-e "s|[@]PACKAGE_VERSION@|$(PACKAGE_VERSION)|g" \
 		-e "s|[@]prefix@|$(prefix)|g" \
 		-e "s|[@]libdir@|$(libdir)|g" \
@@ -30,7 +28,7 @@ $(PACKAGE_NAME): $(PACKAGE_NAME).in
 		$< > $@
 	@chmod +x $@
 
-EXTRA_DIST = $(PACKAGE_NAME).in $(PACKAGE_TARNAME).in
-CLEANFILES = $(PACKAGE_NAME) $(PACKAGE_TARNAME)
+EXTRA_DIST = @PACKAGE_NAME@.in @PACKAGE_TARNAME@.in
+CLEANFILES = @PACKAGE_NAME@ @PACKAGE_TARNAME@
 
 -include $(top_srcdir)/git.mk
