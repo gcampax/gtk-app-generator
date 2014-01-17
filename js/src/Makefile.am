@@ -1,5 +1,3 @@
-NULL =
-
 nodist_bin_SCRIPTS = @PACKAGE_TARNAME@
 nodist_pkgdata_SCRIPTS = @PACKAGE_NAME@
 
@@ -40,13 +38,11 @@ EXTRA_DIST = \
 	$(PACKAGE_NAME).in \
 	$(PACKAGE_TARNAME).in \
 	$(PACKAGE_NAME).src.gresource.xml \
-	$(resource_files) \
-	$(NULL)
+	$(resource_files)
 
 CLEANFILES = \
 	$(PACKAGE_NAME) \
 	$(PACKAGE_TARNAME) \
-	$(PACKAGE_NAME).src.gresource \
-	$(NULL)
+	$(PACKAGE_NAME).src.gresource
 
 -include $(top_srcdir)/git.mk

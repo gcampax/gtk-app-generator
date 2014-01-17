@@ -1,5 +1,3 @@
-NULL =
-
 nodist_bin_SCRIPTS = @PACKAGE_TARNAME@
 nodist_pkgdata_SCRIPTS = @PACKAGE_NAME@
 

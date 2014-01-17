@@ -49,8 +49,7 @@ EXTRA_DIST = \
 	$(PACKAGE_NAME).data.gresource.xml \
 	$(gsettings_SCHEMAS) \
 	$(PACKAGE_NAME).appdata.xml.in \
-	$(resource_files) \
-	$(NULL)
+	$(resource_files)
 
 CLEANFILES = \
 	$(PACKAGE_NAME).service \
@@ -58,8 +57,7 @@ CLEANFILES = \
 	$(PACKAGE_NAME).appdata.xml \
 	$(apps_DATA) \
 	*.valid \
-	gschemas.compiled \
-	$(NULL)
+	gschemas.compiled
 
 # For uninstalled use
 all-local:
