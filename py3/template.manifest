@@ -4,6 +4,7 @@
 
 autogen.sh
 configure.ac
+COPYING
 data/application.css
 data/app-menu.ui
 data/icons/Makefile.am
@@ -17,8 +18,11 @@ data/@PACKAGE_NAME@.service.in:data/service.in
 data/@PACKAGE_NAME@.busname:data/busname
 git.mk
 Makefile.am
+NEWS
 @PACKAGE_TARNAME@.anjuta:project.anjuta
 @PACKAGE_TARNAME@.doap:project.doap
+po/LINGUAS
+po/it.po
 po/POTFILES.in
 po/POTFILES.skip
 src/Makefile.am

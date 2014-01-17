@@ -52,7 +52,8 @@ EXTRA_DIST = \
 
 CLEANFILES = \
 	@PACKAGE_NAME@.service \
-	@PACKAGE_NAME@.data.gresource \
+	@PACKAGE_NAME@.data.h \
+	@PACKAGE_NAME@.data.c \
 	@PACKAGE_NAME@.appdata.xml \
 	$(apps_DATA) \
 	*.valid \

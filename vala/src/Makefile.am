@@ -1,4 +1,4 @@
-bin_SCRIPTS = @PACKAGE_TARNAME@
+dist_bin_SCRIPTS = @PACKAGE_TARNAME@
 
 programdir = $(prefix)/lib/@PACKAGE_NAME@
 program_PROGRAMS = @PACKAGE_NAME@

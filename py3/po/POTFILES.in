@@ -3,6 +3,6 @@
 data/@PACKAGE_NAME@.desktop.in
 data/@PACKAGE_NAME@.appdata.xml.in
 data/@PACKAGE_NAME@.gschema.xml
-src/main.js
-
+src/main.py
+src/window.py
 

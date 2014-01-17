@@ -3,10 +3,9 @@ Version:	%{_version}
 Release:	1%{?dist}
 Summary:	@APPLICATION_NAME@
 
-License:	BSD
+License:	GPLv2+ and BSD
 URL:		@PACKAGE_URL@
 Source0:        %{_distdir}-%{version}.tar.xz
-BuildArch:      noarch
 
 %description
 @APPLICATION_COMMENT@
@@ -53,5 +52,6 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_prefix}/lib/systemd/user/busnames.target.wants/%{name}.busname
 %{_datadir}/glib-2.0/schemas/%{name}.gschema.xml
 #%{_datadir}/icons/hicolor/*/apps/%{name}.png
-%{_datadir}/%{name}/
+%{_prefix}/lib/%{name}/
+#%{_datadir}/%{name}/
 #%{_libdir}/%{name}/
