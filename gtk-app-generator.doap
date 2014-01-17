@@ -9,7 +9,7 @@
   <description>
     GtkAppGenerator is a very simple tool for bootstrapping
     a new application project from a set of templates.
-    It includes one template for gjs based applications.
+    It includes templates for gjs, pygobject (python 3) and vala based applications.
   </description>
   <homepage rdf:resource="http://live.gnome.org/GiovanniCampagna/Experiments/ApplicationTools" />
   <!-- <mailing-list rdf:resource="http://mail.gnome.org/mailman/listinfo/gnome-shell-list" /> -->
