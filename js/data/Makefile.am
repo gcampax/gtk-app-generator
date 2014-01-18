@@ -30,20 +30,12 @@ appdata_DATA = @PACKAGE_NAME@.appdata.xml
 		-e "s|[@]bindir@|$(bindir)|g" \
 		$< > $@
 
-servicedir = $(prefix)/lib/systemd/user
-service_DATA = @PACKAGE_NAME@.service @PACKAGE_NAME@.busname
-
-install-data-hook:
-	$(MKDIR_P) $(DESTDIR)$(servicedir)/busnames.target.wants
-	$(LN_S) ../@PACKAGE_NAME@.busname $(DESTDIR)$(servicedir)/busnames.target.wants/@PACKAGE_NAME@.busname
-
-uninstall-hook:
-	rm -f $(DESTDIR)$(servicedir)/busnames.target.wants/@PACKAGE_NAME@.busname
+servicedir = $(datadir)/dbus-1/services
+service_DATA = @PACKAGE_NAME@.service
 
 EXTRA_DIST = \
 	@PACKAGE_NAME@.desktop.in \
 	@PACKAGE_NAME@.service.in \
-	@PACKAGE_NAME@.busname \
 	@PACKAGE_NAME@.data.gresource.xml \
 	$(gsettings_SCHEMAS) \
 	@PACKAGE_NAME@.appdata.xml.in \
