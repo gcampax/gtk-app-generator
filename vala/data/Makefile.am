@@ -26,6 +26,7 @@ appdata_DATA = @PACKAGE_NAME@.appdata.xml
 
 @PACKAGE_NAME@.service: @PACKAGE_NAME@.service.in
 	$(AM_V_GEN) sed \
+		-e "s|[@]prefix@|$(prefix)|g" \
 		-e "s|[@]pkgdatadir@|$(pkgdatadir)|g" \
 		-e "s|[@]pkglibdir@|$(pkglibdir)|g" \
 		-e "s|[@]bindir@|$(bindir)|g" \

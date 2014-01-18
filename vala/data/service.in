@@ -4,6 +4,6 @@ Documentation=@PACKAGE_URL@
 
 [Service]
 BusName=@PACKAGE_NAME@
-ExecStart=@prefix@/lib/@PACKAGE_NAME@
+ExecStart=@prefix@/lib/@PACKAGE_NAME@/@PACKAGE_NAME@
 #Type=application
 ExecStop=@bindir@/gapplication @PACKAGE_NAME@
